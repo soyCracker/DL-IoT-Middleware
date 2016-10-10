@@ -1,5 +1,5 @@
 # Bluetooth Component API：
-```java line-numbers
+```java
     //初始化藍芽，若有錯誤資訊會回傳
     public void hostBtInit(Context c);
     
@@ -22,7 +22,7 @@
     public String hostBtReadData(Context c);  
 ```
 # httpURLconnect API：
-```java line-numbers
+```java
     //向目標網頁發出GET請求，並傳入字串，並取得網頁回覆
     public String hostHttpUrlGet(String strData,String address);
     
