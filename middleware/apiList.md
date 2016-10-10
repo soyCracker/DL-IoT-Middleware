@@ -1,4 +1,4 @@
-## Bluetooth Component API：
+Bluetooth Component API：
 ```java
     //初始化藍芽，若有錯誤資訊會回傳
     public void hostBtInit(Context c);
@@ -21,7 +21,7 @@
     //讀取藍芽裝置傳來的資料，若有錯誤資訊會回傳
     public String hostBtReadData(Context c);  
 ```
-## httpURLconnect API：
+### httpURLconnect API：
 ```java
     //向目標網頁發出GET請求，並傳入字串，並取得網頁回覆
     public String hostHttpUrlGet(String strData,String address);
