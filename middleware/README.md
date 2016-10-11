@@ -1,4 +1,4 @@
-﻿# 開發文檔
+# 開發文檔
 
 使用之技術來自[dynamic-load-apk](https://github.com/singwhatiwanna/dynamic-load-apk)
 
