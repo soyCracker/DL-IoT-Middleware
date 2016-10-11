@@ -30,7 +30,8 @@ HostInterface hostInterface = HostInterfaceManager.getHostInterface();
 hostInterface.hostBtInit(that);
 ```  
   
-關於API請參看[apiList]( https://github.com/soyCracker/DL-IoT-Middleware/blob/master/middleware/apiList.md)，  
+關於API請參看[apiList]( https://github.com/soyCracker/DL-IoT-Middleware/blob/master/middleware/apiList.md)，
+範例請參看sample  
 若想了解運作原理及有開發上的疑問，請參看技術來源[dynamic-load-apk](https://github.com/singwhatiwanna/dynamic-load-apk)  
 
 ## API擴充
