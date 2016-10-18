@@ -15,18 +15,15 @@ public class HostInterfaceImp implements HostInterface {
     public void hostBtInit(Context c) {
     	btComponent.initBluetooth(c);
     }
-    
-    
-    public void hostBtConnect(Context c){
-    	btComponent.btConnect(c);
-    }
-    
+       
+    public void hostBtConnect(Context c,String btAddress){
+    	btComponent.btConnect(c,btAddress);
+    } 
     
     public void hostBtPause(Context c){
     	btComponent.btPause(c);
     }
     
-   
     public void hostBtSendData(Context c , String strMsg){
     	btComponent.sendData(c , strMsg);
     }
@@ -37,10 +34,6 @@ public class HostInterfaceImp implements HostInterface {
     
     public Set<BluetoothDevice> hostBtDeviceList(){
     	return btComponent.btDeviceList();
-    }
-    
-    public void hostBtSetAddress(String address){
-    	btComponent.setBTaddress(address);
     }
 //////////////////Bluetooth Component/////////////////////	
     

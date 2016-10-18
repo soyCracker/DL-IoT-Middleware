@@ -14,11 +14,8 @@ public interface HostInterface {
     //列出搜索到的藍芽裝置位址
     public Set<BluetoothDevice> hostBtDeviceList();
     
-    //設定欲連結之藍芽裝置位址
-    public void hostBtSetAddress(String address);
-    
     //連結藍芽裝置，必須先透過hostBtSetAddress設定欲連結之藍芽裝置位址，若有錯誤資訊會回傳
-    public void hostBtConnect(Context c);
+    public void hostBtConnect(Context c,String btAddress);
     
     //中止與藍芽裝置連結，若有錯誤資訊會回傳
     public void hostBtPause(Context c);

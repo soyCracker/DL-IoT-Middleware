@@ -51,19 +51,6 @@ public class MainActivity extends DLBasePluginActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
-	@Override
-	public void onResume()
-    {
-    	super.onResume();
-    	hostInterface.hostBtConnect(that);
-    }
-	
-	public void onPause()
-	{
-		super.onPause();
-		hostInterface.hostBtPause(that);
-	}
-	
 	public void initView()
 	{
 		btSpinner=(Spinner)findViewById(R.id.btSpinner);
@@ -86,8 +73,7 @@ public class MainActivity extends DLBasePluginActivity {
 			@Override
 			public void onItemSelected(AdapterView<?> adapterview, View view, int position, long id) {
 				// TODO Auto-generated method stub
-				hostInterface.hostBtSetAddress(adapterview.getSelectedItem().toString());
-				hostInterface.hostBtConnect(that);
+				hostInterface.hostBtConnect(that,adapterview.getSelectedItem().toString());
 			}
 
 			@Override
@@ -117,6 +103,13 @@ public class MainActivity extends DLBasePluginActivity {
 				}
 			}		
 		});
+	}
+	
+	@Override
+	public void onBackPressed() 
+	{
+		hostInterface.hostBtPause(that);
+		return;
 	}
 }
 

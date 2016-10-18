@@ -50,10 +50,10 @@ public class BluetoothComponent {
 		}		
 	}
 
-	public void btConnect(Context c)
+	public void btConnect(Context c,String address)
 	{
-		btDevice = btAdapter.getRemoteDevice(btAddress);
-		
+		btAddress=address;
+		btDevice = btAdapter.getRemoteDevice(btAddress);	
 	    try {
 	    	btSocket = btDevice.createRfcommSocketToServiceRecord(MY_UUID);
 	    } catch (IOException e) {
@@ -83,19 +83,19 @@ public class BluetoothComponent {
 	
 	public void btPause(Context c) 
 	{
-		if (outStream != null) {
-		      try {
-		        outStream.flush();
-		      } catch (IOException e) {
-		    	  Toast.makeText( c , "In onPause() failed to flush output", Toast.LENGTH_LONG).show();
-		      }
-		    }
-		 
-		    try     {
-		      btSocket.close();
-		    } catch (IOException e2) {
-		    	Toast.makeText( c , "In onPause() failed to close socket", Toast.LENGTH_LONG).show();
-		    }
+		if (outStream != null) 
+		{
+			try {
+				outStream.flush();
+			} catch (IOException e) {
+				Toast.makeText( c , "In onPause() failed to flush output", Toast.LENGTH_LONG).show();
+			}
+		} 
+		try{
+			btSocket.close();
+		} catch (IOException e2) {
+			Toast.makeText( c , "In onPause() failed to close socket", Toast.LENGTH_LONG).show();
+		}
 	}
 	
 	public void sendData(Context c , String controlMsg)
@@ -135,10 +135,5 @@ public class BluetoothComponent {
 	{
 		Set<BluetoothDevice> pairedDevices = btAdapter.getBondedDevices();
 		return pairedDevices;
-	}
- 
-	public void setBTaddress(String address)
-	{
-		btAddress = address;
 	}
 }
