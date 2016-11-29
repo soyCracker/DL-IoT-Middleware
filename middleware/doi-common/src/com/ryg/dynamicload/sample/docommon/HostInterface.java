@@ -8,31 +8,38 @@ public interface HostInterface {
     
 //////////////////Bluetooth Component/////////////////////    
 	
-	//ªì©l¤ÆÂÅªÞ¡A­Y¦³¿ù»~¸ê°T·|¦^¶Ç
+	//ï¿½ï¿½lï¿½ï¿½ï¿½ÅªÞ¡Aï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½Tï¿½|ï¿½^ï¿½ï¿½
     public void hostBtInit(Context c);
     
-    //¦C¥X·j¯Á¨ìªºÂÅªÞ¸Ë¸m¦ì§}
+    //ï¿½Cï¿½Xï¿½jï¿½ï¿½ï¿½ìªºï¿½ÅªÞ¸Ë¸mï¿½ï¿½}
     public Set<BluetoothDevice> hostBtDeviceList();
     
-    //³sµ²ÂÅªÞ¸Ë¸m¡A¥²¶·¥ý³z¹LhostBtSetAddress³]©w±ý³sµ²¤§ÂÅªÞ¸Ë¸m¦ì§}¡A­Y¦³¿ù»~¸ê°T·|¦^¶Ç
+    //ï¿½sï¿½ï¿½ï¿½ÅªÞ¸Ë¸mï¿½Aï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½zï¿½LhostBtSetAddressï¿½]ï¿½wï¿½ï¿½ï¿½sï¿½ï¿½ï¿½ï¿½ï¿½ÅªÞ¸Ë¸mï¿½ï¿½}ï¿½Aï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½Tï¿½|ï¿½^ï¿½ï¿½
     public void hostBtConnect(Context c,String btAddress);
     
-    //¤¤¤î»PÂÅªÞ¸Ë¸m³sµ²¡A­Y¦³¿ù»~¸ê°T·|¦^¶Ç
+    //ï¿½ï¿½ï¿½ï¿½Pï¿½ÅªÞ¸Ë¸mï¿½sï¿½ï¿½ï¿½Aï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½Tï¿½|ï¿½^ï¿½ï¿½
     public void hostBtPause(Context c);
     
-    //¶Ç°e¦r¦ê¦ÜÂÅªÞ¸Ë¸m¡A¦^¶Ç°e¥Xªº¸ê®Æ»PÂÅªÞ¦ì§}¡A­Y¦³¿ù»~¸ê°T·|¦^¶Ç
+    //ï¿½Ç°eï¿½rï¿½ï¿½ï¿½ï¿½ÅªÞ¸Ë¸mï¿½Aï¿½^ï¿½Ç°eï¿½Xï¿½ï¿½ï¿½ï¿½Æ»Pï¿½ÅªÞ¦ï¿½}ï¿½Aï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½Tï¿½|ï¿½^ï¿½ï¿½
     public void hostBtSendData(Context c , String strMsg);
     
-    //Åª¨úÂÅªÞ¸Ë¸m¶Ç¨Óªº¸ê®Æ¡A­Y¦³¿ù»~¸ê°T·|¦^¶Ç
+    //Åªï¿½ï¿½ï¿½ÅªÞ¸Ë¸mï¿½Ç¨Óªï¿½ï¿½ï¿½Æ¡Aï¿½Yï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½ï¿½Tï¿½|ï¿½^ï¿½ï¿½
     public String hostBtReadData(Context c);  
 //////////////////Bluetooth Component/////////////////////	
     
 //////////////////HttpURLConnect Component/////////////////////
     
-    //¦V¥Ø¼Ðºô­¶µo¥XGET½Ð¨D¡A¨Ã¶Ç¤J¦r¦ê¡A¨Ã¨ú±oºô­¶¦^ÂÐ
+    //ï¿½Vï¿½Ø¼Ðºï¿½ï¿½ï¿½ï¿½oï¿½XGETï¿½Ð¨Dï¿½Aï¿½Ã¶Ç¤Jï¿½rï¿½ï¿½Aï¿½Ã¨ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ï¿½
     public String hostHttpUrlGet(String strData,String address);
     
-    //¦V¥Ø¼Ðºô­¶µo¥XPOST½Ð¨D¡A¨Ã¶Ç¤J¦r¦ê¡A¨Ã¨ú±oºô­¶¦^ÂÐ
+    //ï¿½Vï¿½Ø¼Ðºï¿½ï¿½ï¿½ï¿½oï¿½XPOSTï¿½Ð¨Dï¿½Aï¿½Ã¶Ç¤Jï¿½rï¿½ï¿½Aï¿½Ã¨ï¿½ï¿½oï¿½ï¿½ï¿½ï¿½ï¿½^ï¿½ï¿½
     public String hostHttpUrlPost(String strData,String address);
 //////////////////HttpURLConnect Component/////////////////////
+    
+//////////////////FingerprintComponent Component/////////////////////
+    
+    public void hostFingerprintInit(Context c);
+    public char hostFingerprintStart(Context c);
+    public void hostFingerprintStop();
+//////////////////FingerprintComponent Component/////////////////////
 }
