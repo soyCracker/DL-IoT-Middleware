@@ -1,12 +1,10 @@
 ﻿# DL-IoT-Middleware
 
-DL-IoT-Middleware 是一種物聯網中介軟體，目的為簡化IoT應用及服務的開發過程，並設計一套API提供IoT應用開發者進行軟體開發；利用動態載入技術，將物聯網應用程式連接至中介軟體，以達到隨插即用之功能。
+本研究計畫目標為實作Middleware及設計一套API(Application Programing Interface) ，提供IoT應用開發者一種新的開發模式，利用Dynamic Load apk框架，讓插件APP(Plugin)動態載入應用程式時，能夠使用API，降低應用開發的複雜度、隱藏底層的運作細節、快速建立能與裝置端溝通的程式。
 
-特點:
-  - 動態載入
-  - 學習門檻低
-  - API擴充性高
-  - 降低記憶體和CPU負擔
+對IoT應用開發者的意義在於：提升開發者軟體編寫的效率，使其專注於應用程式所提供的服務。
+
+
 
 [使用之技術來自dynamic-load-apk](https://github.com/singwhatiwanna/dynamic-load-apk)
 
