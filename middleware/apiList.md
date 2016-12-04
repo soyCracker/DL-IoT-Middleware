@@ -1,4 +1,4 @@
-Bluetooth Component API：
+Bluetooth API：
 ```java
     //初始化藍芽，若有錯誤資訊會回傳
     public void hostBtInit(Context c);
@@ -6,11 +6,8 @@ Bluetooth Component API：
     //列出搜索到的藍芽裝置位址
     public Set<BluetoothDevice> hostBtDeviceList();
     
-    //設定欲連結之藍芽裝置位址
-    public void hostBtSetAddress(String address);
-    
     //連結藍芽裝置，必須先透過hostBtSetAddress設定欲連結之藍芽裝置位址，若有錯誤資訊會回傳
-    public void hostBtConnect(Context c);
+    public void hostBtConnect(Context c,String btAddress);
     
     //中止與藍芽裝置連結，若有錯誤資訊會回傳
     public void hostBtPause(Context c);
@@ -29,4 +26,9 @@ httpURLconnect API：
     //向目標網頁發出POST請求，並傳入字串，並取得網頁回覆
     public String hostHttpUrlPost(String strData,String address);
 ```
-
+Fingerprint API(測試中)：
+```java
+    public void hostFingerprintInit(Context c);
+    public char hostFingerprintStart(Context c);
+    public void hostFingerprintStop();
+```
