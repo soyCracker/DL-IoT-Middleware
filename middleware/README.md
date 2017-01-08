@@ -4,8 +4,8 @@
 
 ## 觀念簡介
 DL-lib為library  
-doi-common為API的interface，透過它使用預先設定好的middleware API  
-doi-host為middleware本體  
+doi-common為interface，透過它使用預先設定好的middleware API  
+DL-IoT-Middleware為middleware本體  
 插件(Plugin apk)為動態載入至Middleware的APP  
 
 ## 這裡將簡單敘述幾個開發時的注意事項：  
@@ -35,6 +35,6 @@ hostInterface.hostBtInit(that);
 若想了解運作原理及有開發上的疑問，請參看技術來源[dynamic-load-apk](https://github.com/singwhatiwanna/dynamic-load-apk)  
 
 ## API擴充
-DL-IoT-Middleware的API具有可擴充性，擴充方式也非常簡單，將function class放在doi-host的host.component，  
+DL-IoT-Middleware的API具有可擴充性，擴充方式也非常簡單，將function class放在DL-IoT-Middleware的host.component，  
 把interface implement寫入HostInterfaceImp.java，最後將interface放入doi-common的HostInterface.java，  
 就能在Plugin apk中使用
